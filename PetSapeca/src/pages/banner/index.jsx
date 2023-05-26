@@ -4,7 +4,7 @@ const Banner = () => {
           <nav>
             <ul>
             <li>
-                <img src="../../assets/logo.svg" alt="" />
+            <img src="/logo.svg" alt="Logo" />
             </li>
               <li>
                 <a href="/fornecedor">FORNECEDORES</a>

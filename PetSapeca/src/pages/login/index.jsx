@@ -9,7 +9,6 @@ import {
 import { useForm } from "react-hook-form";
 import { useUsers } from "../../hooks/mutationUser";
 import { Link } from "react-router-dom";
-/*import {logoImg} from "../../assets/logo.jpg" */
 
 const CreateUser = () => {
   const { reset, register, handleSubmit } = useForm();
@@ -28,7 +27,7 @@ const CreateUser = () => {
     <main className="main-login">
       <div className="logo-login">
       <h1>LOGO AQUI</h1>
-      {/* <img src= {logoImg} alt="Logo" />  */}
+     <img src="/logo.svg" alt="Logo" />  
       </div>
 
       <div className="container-login">
