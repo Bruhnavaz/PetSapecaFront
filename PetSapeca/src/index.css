@@ -1,4 +1,11 @@
 /*CSS GERAL*/
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -212,6 +219,9 @@ button:focus-visible {
 /*FIM ESTILO LOGIN*/
 
 /*INICIO ESTILO TELA HOME*/
+.page-home {
+  background-color: #D9D9D9;
+}
 
 .header-user {
   width: 100vw;
@@ -252,6 +262,44 @@ nav ul li:hover {
 .page-open {
   border-bottom: 2px #50d1d9 solid;
 }
+
+.carrossel-container {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.carrossel-itens {
+  display: flex;
+  scroll-snap-align: start;
+  width: fit-content;
+}
+
+.item {
+  flex: 0 0 60vw;
+  height: 50vh;
+  width: 600px;
+  scroll-snap-align: start;
+  background-color: #ba1919;
+  margin-right: 12px;
+}
+
+.item .um {
+  background-color: #1a1a1a;
+}
+.item .dois {
+  background-color: #ba1919;
+}
+
+.item .tres {
+  background-color: #419024;
+}
+
+.item .quatro {
+  background-color: #612bc4;
+}
+
 /*FIM ESTILO TELA HOME*/
 
 /*INICIO ESTILO TELA HOME-ADMIN*/
