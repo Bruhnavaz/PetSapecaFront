@@ -4,7 +4,7 @@ const Fornecedor = () => {
           <nav>
             <ul>
             <li>
-                <img src="../../assets/logo.svg" alt="" />
+            <img src="/logo.svg" alt="Logo" />
             </li>
               <li>
                 <a className="page-admin" href="/fornecedor">FORNECEDORES</a>

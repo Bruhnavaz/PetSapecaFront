@@ -24,10 +24,9 @@ const CreateUser = () => {
 
   return (
     <main className="main-cadastrar">
-    {/* <div className="logo-cadastrar"> */}
-    {/* <h1>LOGO AQUI</h1> */}
-    {/* <img src= {logoImg} alt="Logo" />  */}
-    {/* </div> */}
+     <div className="logo-cadastrar"> 
+     <img src="/logo.svg" alt="Logo" />  
+     </div> 
 
     <div className="container-cadastrar">
     <h1 className="titulo-cadastro">CADASTRAR</h1>
