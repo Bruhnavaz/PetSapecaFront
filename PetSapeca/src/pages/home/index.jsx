@@ -5,49 +5,43 @@ const Home = () => {
   // const { users, isLoading, isError, error } = useUsers()
 
   return (
-    <header className="header-user">
-      <nav>
-        <ul>
-        <li>
-            <img src="../../assets/logo.svg" alt="" />
-        </li>
-          <li>
-            <a className="page-open" href="/home">Página Inicial</a>
-          </li>
-          <li>
-            <a href="/favoritos">Favoritos</a>
-          </li>
-          <li>
-            <a href="/carrinho">Carrinho</a>
-   
-          </li>
-        </ul>
-      </nav>
-    </header>
-    // <Container className="container-home">
-    //     <Flex className="header" margin={1}>
-    //         <Box>Pet Sapeca</Box>
-    //         <Spacer />
-    //         <Box>
-    //             <Link to='/'>Pagina Principal</Link>
-    //         </Box>
-    //         <Box>
-    //             <Link to='/cadastrar'>Favoritos</Link>
-    //         </Box>
-    //         <Box>
-    //             <Link to='/cadastrar'>Carrinho</Link>
-    //         </Box>
-    //     </Flex>
-    //     <h1>Lista de usuários</h1>
-    //     <hr />
-    //     {isLoading && <p>Carregando...</p>}
-    //     {isError && <p>{error.message}</p>}
-    //     <ul>
-    //         {users?.map((user) => (
-    //             <li key={user.id}>{user.name}</li>
-    //         ))}
-    //     </ul>
-    // </Container>
+    <div className="page-home">
+      <header className="header-user">
+        <nav>
+          <ul>
+            <li>
+              <img src="../../assets/logo.svg" alt="" />
+            </li>
+            <li>
+              <a className="page-open" href="/home">
+                Página Inicial
+              </a>
+            </li>
+            <li>
+              <a href="/favoritos">Favoritos</a>
+            </li>
+            <li>
+              <a href="/carrinho">Carrinho</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main className="main-home">
+        <div className="carrossel-container">
+          <div className="carrossel-itens">
+            <div className="item um">Slide 1</div>
+            <div className="item dois">Slide 2</div>
+            <div className="item tres">Slide 3</div>
+            <div className="item quatro">Slide 4</div>
+          </div>
+        </div>
+        <div className="produtos">
+          <div className="produto-item">
+
+          </div>
+        </div>
+      </main>
+    </div>
   );
 };
 
