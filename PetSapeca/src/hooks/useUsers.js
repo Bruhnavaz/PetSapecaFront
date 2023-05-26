@@ -1,16 +1,31 @@
 import { useQuery } from "@tanstack/react-query"
 
 const fetchUsers = async () => {
-  const res = await fetch("https://localhost:3000")
-  return res.json()
+    const res = await fetch('http://localhost:3000/users')
+    return res.json()
 }
 
 export const useUsers = () => {
-  const { data, error, isLoading } = useQuery(["users"], fetchUsers)
+    const {data, error, isError, isLoading} = useQuery(['users'],fetchUsers)
+    return {
+        users: data,
+        error,
+        isLoading,
+        isError
+    }
+}
 
-  return {
-    users: data,
-    isLoading,
-    error,
-  }
+const fetchUserById = async (id) => {
+    const res = await fetch(`http://localhost:3000/users/${id}`)
+    return res.json()    
+}
+
+export const useUser = (id) => {
+    const {data, error, isError, isLoading} = useQuery(['user',id],() => fetchUserById(id))
+    return {
+        user: data,
+        error,
+        isLoading,
+        isError
+    }
 }

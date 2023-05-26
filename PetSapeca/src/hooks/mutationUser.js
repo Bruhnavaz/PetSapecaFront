@@ -1,16 +1,48 @@
-import { useQuery } from "@tanstack/react-query"
+import { useMutation } from "@tanstack/react-query";
 
-const fetchUsers = async () => {
-  const res = await fetch("https://localhost:3000")
+const createUser = async (user) => {
+  const res = await fetch("http://localhost:3000/users", {
+    method: "POST",
+    body: JSON.stringify(user),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  return res.json();
+}
+
+export const useCreateUser = () => {
+    return useMutation(createUser)
+}
+
+const deleteUser = async (id) => {
+  const res = await fetch(`http://localhost:3000/users/${id}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
   return res.json()
 }
 
-export const useUsers = () => {
-  const { data, error, isLoading } = useQuery(["users"], fetchUsers)
+export const useDeleteUser = () => {
+  return useMutation(deleteUser)
+}
 
-  return {
-    users: data,
-    isLoading,
-    error,
-  }
+const updateUser = async (user) => {
+  const res = await fetch(`http://localhost:3000/users/${user.id}`, {
+    method: "PUT",
+    body: JSON.stringify(user),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  return res.json()
+}
+
+export const useUpdateUser = () => {
+  return useMutation(updateUser)
 }
