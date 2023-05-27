@@ -1,7 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 
 const createUser = async (user) => {
-  const res = await fetch("http://localhost:3000/users", {
+  const res = await fetch("https://api-grupocinco.onrender.com/users", {
     method: "POST",
     body: JSON.stringify(user),
     headers: {
@@ -12,7 +12,7 @@ const createUser = async (user) => {
   return res.json();
 }
 
-export const useCreateUser = () => {
+export const useUsers = () => {
     return useMutation(createUser)
 }
 

@@ -25,7 +25,7 @@ const Fornecedor = () => {
             <div className="board-fornecedores">
             <h2>FORNECEDORES</h2>
             <ul className="lista-fornecedor">
-              <li><p>123.123.123/0001 </p>,<p>Mars S.A </p>,<p>(11) 1234-5678 </p>,<p>contato@mars.com.br </p></li>
+              <li><p>123.123.123/0001 </p>,<p>Mars S.A </p>,<p>(11) 1234-5678 </p>,<p>contato@mars.com.br  </p></li>
             </ul>
             </div>
           </div>

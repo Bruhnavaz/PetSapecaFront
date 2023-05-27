@@ -8,8 +8,8 @@ const CreateUser = () => {
 
   const { mutate: mutateCreateUser, isError } = useUsers();
 
-  const onSubmit = (data) => {
-    mutateCreateUser(data);
+  const onSubmit = () => {
+    mutateCreateUser();
     if (!isError) {
       reset();
       alert("Usuário cadastrado com sucesso!");

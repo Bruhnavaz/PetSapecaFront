@@ -26,7 +26,7 @@ const CreateUser = () => {
   return (
     <main className="main-login">
       <div className="logo-login">
-      <h1>LOGO AQUI</h1>
+      {/* <h1>LOGO AQUI</h1> */}
      <img src="/logo.svg" alt="Logo" />  
       </div>
 

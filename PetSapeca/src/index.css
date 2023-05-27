@@ -169,7 +169,10 @@ button:focus-visible {
 .logo-login {
   padding-top: 90px;
   flex-grow: 1;
+  left: 45%;
+  position: relative;
 }
+
 
 .container-login {
   background-color: #50d1d9;

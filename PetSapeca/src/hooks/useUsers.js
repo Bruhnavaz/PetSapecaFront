@@ -1,11 +1,11 @@
 import { useQuery } from "@tanstack/react-query"
 
 const fetchUsers = async () => {
-    const res = await fetch('http://localhost:3000/users')
+    const res = await fetch('https://api-grupocinco.onrender.com/users')
     return res.json()
 }
 
-export const useUsers = () => {
+export const useCreateUsers = () => {
     const {data, error, isError, isLoading} = useQuery(['users'],fetchUsers)
     return {
         users: data,
@@ -17,7 +17,8 @@ export const useUsers = () => {
 
 const fetchUserById = async (id) => {
     const res = await fetch(`http://localhost:3000/users/${id}`)
-    return res.json()    
+    return res.json()  
+    
 }
 
 export const useUser = (id) => {
