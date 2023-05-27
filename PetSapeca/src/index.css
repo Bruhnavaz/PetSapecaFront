@@ -28,7 +28,7 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #000;
 }
 
 body {
@@ -220,9 +220,14 @@ button:focus-visible {
 /*FIM ESTILO LOGIN*/
 
 /*INICIO ESTILO TELA HOME*/
-.main-home{
-  height: 100vh;
+.main-home{ 
+  position: fixed;
+  top: 10vh;
+  height: 90vh;
+  top: 12vh;
+  height: 88vh;
 }
+
 .page-home {
   background-color: #D9D9D9;
 }
@@ -245,7 +250,9 @@ nav ul {
   padding: 0;
   justify-content: space-between;
   display: flex;
-  width: 100%;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 nav ul li {
@@ -267,6 +274,10 @@ nav ul li:hover {
   border-bottom: 2px #50d1d9 solid;
 }
 
+.logo-header {
+  width: 55px;
+}
+
 .carrossel-container {
   width: 100vw;
   overflow-x: scroll;
@@ -281,38 +292,25 @@ nav ul li:hover {
 
 .produtos {
   align-items: center;
-  width: 80vw;
-  margin-left: 10vw;
-  margin-right: 10vw;
+  width: 95vw;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
   margin-top: 30px;
+  display: flex;
   justify-content: space-between;
 }
 
 .item {
   flex: 0 0 60vw;
-  height: 50vh;
+  height: 300px;
   width: 600px;
   scroll-snap-align: start;
-  background-color: #ba1919;
+  background-color: #e35f5f;
   margin-right: 12px;
 }
 
-.item .um {
-  background-color: #1a1a1a;
-}
-.item .dois {
-  background-color: #ba1919;
-}
-
-.item .tres {
-  background-color: #419024;
-}
-
-.item .quatro {
-  background-color: #612bc4;
-}
-
 .card {
+  text-align: center;
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -320,6 +318,7 @@ nav ul li:hover {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-right: 12px;
 }
 
 .card-img {
@@ -376,3 +375,107 @@ nav ul li:hover {
   border-bottom: 2px #eea34a solid;
 }
 /*FIM ESTILO TELA HOME-ADMIN*/
+
+.main-fornecedor{ 
+  position: fixed;
+  top: 12vh;
+  height: 88vh;
+  width: 100vw;
+  display: flex;
+  background-color: #D9D9D9;
+}
+
+.fornecedores{
+width: 50vw;
+height: 100%;
+}
+
+.form-fornecedores{
+  width: 50vw;
+  height: 100%;
+}
+
+.board-fornecedores {
+  border: 2px #eea34a solid;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  position: relative;
+}
+
+.board-fornecedores h2 {
+  margin-top: 8px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.cadastro-fornecedor {
+  background-color: #EEA34A;
+  width: 80%;
+  height: 40%;
+  margin-left: 10%;
+  margin-top: 5%;
+  border-radius: 10px;
+}
+
+.cadastro-fornecedor h2{
+  margin-top: 6px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.editar-fornecedor {
+  background-color: #EEA34A;
+  width: 80%;
+  height: 40%;
+  margin-left: 10%;
+  margin-top: 5%;
+  border-radius: 10px;
+}
+
+.editar-fornecedor h2 {
+  margin-top: 6px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.main-fav{ 
+  position: fixed;
+  top: 10vh;
+  height: 90vh;
+  top: 12vh;
+  height: 88vh;
+}
+
+.main-carrinho{ 
+  position: fixed;
+  top: 10vh;
+  height: 90vh;
+  top: 12vh;
+  height: 88vh;
+}
+
+.contador {
+  display: flex;
+  width: 45px;
+}
+
+.valor {
+  border: 1px #EEA34A solid;
+  width: 25px;
+  text-align: center;
+  background-color: #EEA34A;
+}
+
+.lista-fornecedor {
+  margin-top: 30px;
+  list-style: none;
+  width: 95%;
+  margin-left: 2.5%;
+}
+
+.list-fornecedor li {
+  display: flex !important;
+
+}
