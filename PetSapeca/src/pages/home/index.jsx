@@ -29,10 +29,11 @@ const Home = () => {
       <main className="main-home">
         <div className="carrossel-container">
           <div className="carrossel-itens">
-            <div className="item um">Slide 1</div>
-            <div className="item dois">Slide 2</div>
-            <div className="item tres">Slide 3</div>
-            <div className="item quatro">Slide 4</div>
+            <div className="item">     <img className="item-banner" src="/banner.png" alt="banner" />  
+</div>
+            <div className="item tres"> <img className="item-banner" src="/banner5.jpg" alt="banner" />  </div>
+            <div className="item quatro"> <img className="item-banner" src="/banner3.jpeg" alt="banner" />  </div>
+            <div className="item dois"> <img className="item-banner" src="/banner2.png" alt="banner" />  </div>
           </div>
         </div>
         <div className="produtos">
