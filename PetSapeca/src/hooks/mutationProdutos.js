@@ -1,10 +1,9 @@
 import { useMutation } from "@tanstack/react-query";
 
-const createUser = async (user) => {
-  console.log(user)
-  const res = await fetch("https://api-grupocinco.onrender.com/users", {
+const createProdutos = async (produto) => {
+  const res = await fetch("https://api-grupocinco.onrender.com/item", {
     method: "POST",
-    body: JSON.stringify(user),
+    body: JSON.stringify(produto),
     headers: {
       "Content-Type": "application/json",
     },
@@ -14,10 +13,10 @@ const createUser = async (user) => {
 }
 
 export const useUsers = () => {
-    return useMutation(createUser)
+    return useMutation(createProdutos)
 }
 
-const deleteUser = async (id) => {
+const deleteProdutos = async (id) => {
   const res = await fetch(`http://localhost:3000/users/${id}`, {
     method: "DELETE",
     headers: {
@@ -29,13 +28,13 @@ const deleteUser = async (id) => {
 }
 
 export const useDeleteUser = () => {
-  return useMutation(deleteUser)
+  return useMutation(deleteProdutos)
 }
 
-const updateUser = async (user) => {
-  const res = await fetch(`http://localhost:3000/users/${user.id}`, {
+const updateProduto = async (produto) => {
+  const res = await fetch(`http://localhost:3000/users/${produto.id}`, {
     method: "PUT",
-    body: JSON.stringify(user),
+    body: JSON.stringify(produto),
     headers: {
       "Content-Type": "application/json",
     },
@@ -44,6 +43,6 @@ const updateUser = async (user) => {
   return res.json()
 }
 
-export const useUpdateUser = () => {
-  return useMutation(updateUser)
+export const useUpdateProduto = () => {
+  return useMutation(updateProduto)
 }

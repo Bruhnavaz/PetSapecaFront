@@ -1,20 +1,28 @@
-import {Stack,FormControl,FormLabel,Input,Button,} from "@chakra-ui/react";
+import {useToast,Stack,FormControl,FormLabel,Input,Button,} from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import { useUsers } from "../../hooks/mutationUser";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const CreateUser = () => {
+  const toast = useToast()
   const { reset, register, handleSubmit } = useForm();
 
   const { mutate: mutateCreateUser, isError } = useUsers();
 
-  const onSubmit = () => {
-    mutateCreateUser();
-    if (!isError) {
-      reset();
-      alert("Usuário cadastrado com sucesso!");
+  const onSubmit = (data) => {
+    mutateCreateUser(data)
+    if(!isError){
+        toast({
+            title: "Sucesso",
+            description: "Usuário criado com sucesso",
+            status: 'success',
+            // duration: 3000,
+            // isClosable: true,
+            // onCloseComplete: () => window.location = '/'
+        })
+        reset()
     }
-  };
+}
 
   return (
     <main className="main-cadastrar">
@@ -84,7 +92,7 @@ const CreateUser = () => {
           </FormControl>
 {/* tirar dúvida sobre como fazer o login */}
           <Button id="botao-cadastrar" mt={4} colorScheme="teal" type="submit">
-            <Link to="/home">Cadastrar</Link>{" "}
+            {/* <Link to="/home">Cadastrar</Link>{" "} */}
           </Button>
         </Stack>
       </form>

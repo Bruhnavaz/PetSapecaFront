@@ -1,8 +1,9 @@
-// import { useUsers } from "../../hooks/useUsers"
 // import { Box, Container, Flex, Spacer } from '@chakra-ui/react'
+// import { useUsers } from "../../hooks/useUsers"
 // import { Link } from "react-router-dom"
+
 const Home = () => {
-  // const { users, isLoading, isError, error } = useUsers()
+  //  const { users, isLoading} = useUsers()
 
   return (
     <div className="page-home">
@@ -44,7 +45,7 @@ const Home = () => {
               className="card-img"
             />
             <div className="card-content">
-              <h3 className="card-title">Nome do Produto</h3>
+              <h3 className="card-title"></h3>
               <p className="card-price">R$ 99,99</p>
               <p className="card-description">Descrição do produto...</p>
               <div className="card-icons">
@@ -107,5 +108,6 @@ const Home = () => {
     </div>
   );
 };
+
 
 export default Home;
