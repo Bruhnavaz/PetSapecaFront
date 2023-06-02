@@ -187,6 +187,15 @@ nav ul li:hover {
   background-color: #D9D9D9;
 }
 
+.main-produto{ 
+  position: fixed;
+  top: 12vh;
+  height: 88vh;
+  width: 100vw;
+  display: flex;
+  background-color: #D9D9D9;
+}
+
 
 /***********************************/
 /**************TELA CADASTRO********/
@@ -460,8 +469,13 @@ height: 100%;
 }
 
 .form-fornecedores{
+  padding: 10px;
   width: 50vw;
   height: 100%;
+}
+
+.form-cadastrar{
+  margin-top: 6px;
 }
 
 .board-fornecedores {
@@ -480,31 +494,17 @@ height: 100%;
 }
 
 .cadastro-fornecedor {
+  margin-top: 20px;
+  padding-top: 20px;
   background-color: #EEA34A;
-  width: 80%;
-  height: 40%;
-  margin-left: 10%;
-  margin-top: 5%;
   border-radius: 10px;
+  padding-left: 15px;
+  height: 85%;
 }
 
 .cadastro-fornecedor h2{
   margin-top: 6px;
-  font-size: 1.2rem;
-  text-align: center;
-}
-
-.editar-fornecedor {
-  background-color: #EEA34A;
-  width: 80%;
-  height: 40%;
-  margin-left: 10%;
-  margin-top: 5%;
-  border-radius: 10px;
-}
-
-.editar-fornecedor h2 {
-  margin-top: 6px;
+  margin-bottom: 2px;
   font-size: 1.2rem;
   text-align: center;
 }
@@ -519,3 +519,138 @@ height: 100%;
 .list-fornecedor li {
   display: flex !important;
 }
+
+#cnpj, #nomeFornecedor, #emailFornecedor, #ruaFornecedor, #numeroFornecedor, #bairroFornecedor, #cidadeFornecedor, #estadoFornecedor{
+  background-color: #d9d9d9;
+  width: 95%;
+  height: 25px;
+}
+
+#botao-editar-produto {
+  width: 90px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#botao-cadastrar-produto {
+  width: 110px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+
+/***********************************/
+/**********TELA PRODUTOS********/
+/***********************************/
+
+.produto{
+  width: 50vw;
+  height: 100%;
+  }
+  
+  .form-produto{
+    padding: 10px;
+    width: 50vw;
+    height: 100%;
+  }
+  
+  .board-produto {
+    border: 2px #eea34a solid;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    position: relative;
+  }
+  
+  .board-produto h2 {
+    margin-top: 8px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .cadastro-produto {
+    margin-top: 20px;
+    padding-top: 20px;
+    background-color: #EEA34A;
+    border-radius: 10px;
+    padding-left: 15px;
+    height: 85%;
+  }
+  
+  .cadastro-produto h2{
+    margin-top: 6px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .lista-produto {
+    margin-top: 30px;
+    list-style: none;
+    width: 95%;
+    margin-left: 2.5%;
+  }
+  
+  .list-produto li {
+    display: flex !important;
+  }
+
+  .input-produto {
+    width: 80%;
+  }
+
+  #quantidade, #cnpjFornecedor, #tipoProduto, #unidadeMedida, #publico {
+    width: 95%;
+    height: 25px;
+    background-color: #d9d9d9;
+  }
+
+  #nomeProduto, #nomeProduto-label{
+    width: 95%;
+    height: 25px;
+    margin-left: -15px;
+  }
+
+  #valorProduto, #quantidade, #cod, #nomeProduto, #quantidade, #cnpjFornecedor, #tipoProduto, #unidadeMedida, #publico{
+    background-color: #d9d9d9;
+
+  }
+
+  #cod,#cod-label {
+    width: 40%;
+    height: 25px;
+  }
+
+  #valorProduto, #quantidade {
+    width: 90%;
+    height: 25px;
+
+  }
+
+  .form-inputs{
+    height: 60%;
+  }
+
+  .dois-campos{
+    display: flex;
+  }
+
+  .botoes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #botao-editar-produto {
+    width: 90px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  #botao-cadastrar-produto {
+    width: 110px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  

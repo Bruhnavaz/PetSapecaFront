@@ -2,8 +2,10 @@
 // import { useUsers } from "../../hooks/useUsers"
 // import { Link } from "react-router-dom"
 
+import { useProdutos } from "../../hooks/mutationProdutos";
+
 const Home = () => {
-  //  const { users, isLoading} = useUsers()
+    const { produtos,isLoading,isError,Produtos} = useProdutos()
 
   return (
     <div className="page-home">
@@ -38,22 +40,27 @@ const Home = () => {
           </div>
         </div>
         <div className="produtos">
-          <div className="card">
+        {isLoading && <p>Carregando…</p>}
+    {isError && <p>Erro ao carregar produtos</p>}
+     {(produtos && !isError) ? Produtos.forEach((produto) => (
+          <div key={produto.id} className="card">
             <img
               src="caminho_da_imagem"
               alt="Imagem do Produto"
               className="card-img"
             />
             <div className="card-content">
-              <h3 className="card-title"></h3>
-              <p className="card-price">R$ 99,99</p>
-              <p className="card-description">Descrição do produto...</p>
+              <h3 className="card-title">{produto.nomeProduto}</h3>
+              <p className="card-price">{produto.valor}</p>
+              <p className="card-description">{produto.tipoProduto}</p>
+              
               <div className="card-icons">
                 <span className="heart-icon">&#10084;</span>
                 <span className="cart-icon">&#128722;</span>
               </div>
             </div>
           </div>
+     )) : <p></p>}
           <div className="card">
             <img
               src="caminho_da_imagem"
