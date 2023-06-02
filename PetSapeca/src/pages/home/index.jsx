@@ -63,7 +63,7 @@ const Home = () => {
      )) : <p></p>}
           <div className="card">
             <img
-              src="caminho_da_imagem"
+              src="/racao01.png"
               alt="Imagem do Produto"
               className="card-img"
             />
@@ -79,7 +79,7 @@ const Home = () => {
           </div>
           <div className="card">
             <img
-              src="caminho_da_imagem"
+              src="/racao02.png"
               alt="Imagem do Produto"
               className="card-img"
             />
@@ -96,7 +96,24 @@ const Home = () => {
 
           <div className="card">
             <img
-              src="caminho_da_imagem"
+              src="/racao03.png"
+              alt="Imagem do Produto"
+              className="card-img"
+            />
+            <div className="card-content">
+              <h3 className="card-title">Nome do Produto</h3>
+              <p className="card-price">R$ 99,99</p>
+              <p className="card-description">Descrição do produto...</p>
+              <div className="card-icons">
+                <span className="heart-icon">&#10084;</span>
+                <span className="cart-icon">&#128722;</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="card">
+            <img
+              src="/racao04.png"
               alt="Imagem do Produto"
               className="card-img"
             />

@@ -160,6 +160,8 @@ nav ul li:hover {
   height: 90vh;
   top: 12vh;
   height: 88vh;
+  overflow-y: scroll;
+  padding: 10px;
 }
 
 .main-fav{ 
@@ -393,16 +395,18 @@ nav ul li:hover {
   text-align: center;
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 250px;
   background-color: #f2f2f2;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-right: 12px;
+  padding: 10px;
+  align-items: center;
 }
 
 .card-img {
-  width: 100%;
+  width: 60%;
   height: auto;
 }
 
@@ -494,12 +498,14 @@ height: 100%;
 }
 
 .cadastro-fornecedor {
-  margin-top: 20px;
-  padding-top: 20px;
+  margin-top: 14px;
+  padding-top: 14px;
   background-color: #EEA34A;
   border-radius: 10px;
   padding-left: 15px;
-  height: 85%;
+  height: 95%;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .cadastro-fornecedor h2{
@@ -570,17 +576,18 @@ height: 100%;
   }
   
   .cadastro-produto {
-    margin-top: 20px;
+    overflow: hidden;
+    margin-top: 14px;
     padding-top: 20px;
+    padding-bottom: 10px;
     background-color: #EEA34A;
     border-radius: 10px;
     padding-left: 15px;
-    height: 85%;
+    height: 95%;
+    overflow-y: scroll; 
   }
   
   .cadastro-produto h2{
-    margin-top: 6px;
-    margin-bottom: 10px;
     font-size: 1.2rem;
     text-align: center;
   }
@@ -637,10 +644,13 @@ height: 100%;
   }
 
   .botoes{
-    width: 100%;
+    width: 95%;
     display: flex;
+    margin-left: 10px;
+    bottom: 0;
     justify-content: space-between;
-  }
+}
+  
 
   #botao-editar-produto {
     width: 90px;
